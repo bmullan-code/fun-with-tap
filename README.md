@@ -146,3 +146,16 @@ tanzu package installed list -n tap-install
 bmullan-a01:tanzu bmullan$
 ```
  
+Install the sample accelerators
+```
+# download from pivnet
+# https://network.tanzu.vmware.com/products/app-accelerator
+
+kubectl apply -f sample-accelerators-0-2.yaml
+```
+Port forward the accelerator ui.
+```
+k port-forward svc/acc-ui-server -n accelerator-system :80
+```
+
+
